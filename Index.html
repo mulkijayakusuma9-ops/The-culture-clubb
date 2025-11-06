@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Culture Club - Fashion Modern Online Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+    /* 🌈 Font & Layout */
+    body {
+      margin: 0;
+      font-family: 'Anton', sans-serif;
+      background: linear-gradient(120deg, #0d0d14, #1c1c25);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* 🔝 Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+      background: rgba(15, 15, 20, 0.9);
+      padding: 15px 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      backdrop-filter: blur(5px);
+      z-index: 999;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      color: #ff3366;
+    }
+
+    /* 🏠 Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+      animation: moveBg 20s linear infinite alternate;
+    }
+
+    .hero img {
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      letter-spacing: 3px;
+      margin: 0;
+      color: #ff3366;
+    }
+
+    .hero-text p {
+      font-size: 1.3rem;
+      margin: 10px 0 30px;
+    }
+
+    .btn {
+      background: #ff3366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff6699;
+    }
+
+    /* ✨ Section General */
+    .content {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-size: 2.2rem;
+      color: #ff3366;
+      margin-bottom: 30px;
+    }
+
+    /* 🧥 Produk Grid */
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .product-card {
+      background: #1e1e28;
+      border-radius: 15px;
+      width: 240px;
+      padding: 15px;
+      transition: 0.4s;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #fff;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .product-card span {
+      display: block;
+      margin: 10px 0;
+      color: #ff3366;
+    }
+
+    .product-card button {
+      background: #ff3366;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .product-card button:hover {
+      background: #ff6699;
+    }
+
+    /* ⚙️ Upload Form */
+    .upload-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .upload-form input,
+    .upload-form textarea,
+    .upload-form button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-family: 'Anton', sans-serif;
+    }
+
+    .upload-form button {
+      background: #ff3366;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .upload-form button:hover {
+      background: #ff6699;
+    }
+
+    /* 📱 Social Media */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    /* 🔧 Animasi */
+    @keyframes moveBg {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* 🦶 Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      color: #999;
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2.3rem;
+      }
+      .product-card {
+        width: 90%;
+      }
+      .navbar {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 🌐 Navbar -->
+  <nav class="navbar">
+    <a href="#home" class="active">Home</a>
+    <a href="#products">Etalase</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#customer">Customer Fashion</a>
+    <a href="#social">Social Media</a>
+    <a href="#about">Tentang Kami</a>
+  </nav>
+  
+  <!-- 🏠 HOME -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <img src="Logo.png" alt="Logo The Culture Club">
+      <h1>The Culture Club</h1>
+      <p>Tampil Stylish, Tunjukkan Gayamu.</p>
+      <a href="#products" class="btn">Belanja Sekarang</a>
+    </div>
+  </section>
+
+  <!-- 👕 ETALASE -->
+  <section id="products" class="content">
+    <h2>Koleksi Fashion</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="Jaket.jpg" alt="Jaket Street">
+        <h3>Jaket The Culture Club</h3>
+        <p>Desain modern dengan bahan tebal premium.</p>
+        <span>Rp 3.599.999</span>
+        <button>Checkout</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Kao.jpg" alt="Kaos Trendi">
+        <h3>Kaos The Culture Club</h3>
+        <p>Kenyamanan maksimal dan desain trendi.</p>
+        <span>Rp 1.999.999</span>
+        <button>Checkout</button>
+      </div>
+
+      <div class="product-card">
+        <img src="Kaos.jpg" alt="Kaos Oversized">
+        <h3>Kaos Oversized The Culture Club</h3>
+        <p>Gaya santai dengan bahan lembut dan nyaman.</p>
+        <span>Rp 1.000.000</span>
+        <button>Checkout</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚙️ DASHBOARD -->
+  <section id="dashboard" class="content">
+    <h2>Upload Produk Fashion</h2>
+    <form class="upload-form">
+      <input type="text" placeholder="Nama Produk" required>
+      <input type="number" placeholder="Harga Produk" required>
+      <textarea placeholder="Deskripsi Produk" required></textarea>
+      <input type="file" accept="image/*" required>
+      <button type="submit">Tambah Produk</button>
+    </form>
+  </section>
+
+  <!-- 💬 CUSTOMER FASHION -->
+  <section id="customer" class="content">
+    <h2>Customer Fashion</h2>
+    <p>Hubungi kami untuk bantuan pemesanan:</p>
+    <p>Email: <b>thecultureclub@gmail.com</b></p>
+    <p>WhatsApp: <b>+62 812-3456-7890</b></p>
+  </section>
+
+  <!-- 📱 SOCIAL MEDIA -->
+  <section id="social" class="content">
+    <h2>Social Media</h2>
+    <ul>
+      <li>Instagram: @theculture_club</li>
+      <li>TikTok: @theculture_club</li>
+      <li>Facebook: @theculture_club</li>
+    </ul>
+  </section>
+
+  <!-- ℹ️ ABOUT -->
+  <section id="about" class="content">
+    <h2>Tentang Kami</h2>
+    <p>
+      The Culture Club adalah brand fashion yang berakar pada keberagaman, kebebasan berekspresi, dan kekuatan budaya.
+      Brand ini mengusung konsep bahwa fashion adalah bahasa universal yang melampaui batas ras, agama, gender, dan generasi — 
+      melalui gaya yang berani, kontemporer, penuh makna, dan tentunya kalcer.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 The Culture Club. All rights reserved.</p>
+  </footer>
+</body>
+</html>
